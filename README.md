@@ -1,6 +1,46 @@
 # Ember-confirm-dialog
 
-This README outlines the details of collaborating on this Ember addon.
+Confirm user actions - just wrap your button/link/whatever with this addon. The target action will be called only when user confirms the dialog.
+
+ ## Usage
+ #### Simple confirm dialog (with default settings)
+
+  Action _confirmedAction_ will be called only when user confirms the confirmation dialog.
+
+  ```
+  {{#confirm-dialog}}
+      <button {{action 'confirmedAction'}}>Click me!</button>
+  {{/confirm-dialog}}
+  ```
+  
+
+  #### Confirm dialog with custom texts and all the callbacks
+
+  _Custom callbacks for confirm and cancel buttons_
+
+  ```
+  {{#confirm-dialog
+  text="Do you want to destry the world?"
+  confirmButton="Yeah, do it!"
+  cancelButton="Noooooo!!!!!"
+  confirmAction=(action 'confirmDestroy')
+  cancelAction=(action 'cancelDestroy')
+  }}
+      <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
+  {{/confirm-dialog}}
+```
+ #### Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons)
+
+  ```
+  {{#confirm-dialog
+  confirmButtonClass="btn btn-success"
+  cancelButtonClass="btn btn-danger"
+  }}
+      <button {{action 'confirmedAction'}}>Click me!</button>
+  {{/confirm-dialog}}
+  ```
+
+# Addon Development
 
 ## Installation
 

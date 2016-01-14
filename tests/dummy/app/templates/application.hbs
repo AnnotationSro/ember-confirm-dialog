@@ -1,3 +1,31 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container-fluid">
 
-{{outlet}}
+    <h3>Confirm dialog with default settings</h3>
+
+  {{#confirm-dialog}}
+      <button {{action 'confirmedAction'}}>Click me!</button>
+  {{/confirm-dialog}}
+
+    <h3>Confirm dialog with custom texts and all the callbacks</h3>
+
+    <p class="help-block">Custom callbacks for confirm and cancel buttons</p>
+
+  {{#confirm-dialog
+  text="Do you want to destry the world?"
+  confirmButton="Yeah, do it!"
+  cancelButton="Noooooo!!!!!"
+  confirmAction=(action 'confirmDestroy')
+  cancelAction=(action 'cancelDestroy')
+  }}
+      <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
+  {{/confirm-dialog}}
+
+    <h3>Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons)</h3>
+
+  {{#confirm-dialog
+  confirmButtonClass="btn btn-success"
+  cancelButtonClass="btn btn-danger"
+  }}
+      <button {{action 'confirmedAction'}}>Click me!</button>
+  {{/confirm-dialog}}
+</div>

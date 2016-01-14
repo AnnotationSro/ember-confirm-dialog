@@ -1,0 +1,1 @@
+export { default } from 'ember-confirm-dialog/components/confirm-dialog';

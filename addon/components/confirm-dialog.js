@@ -3,7 +3,7 @@ import layout from '../templates/components/confirm-dialog';
 
 export default Ember.Component.extend({
   layout: layout,
-  classNames:['confirm-dialog'],
+  classNames:['confirm-dialog-button'],
 
   //---public
   confirmAction: Ember.K,//optional action executed when user confirms the dialog

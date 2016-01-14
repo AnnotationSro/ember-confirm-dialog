@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-confirm-dialog'
+  name: 'ember-confirm-dialog',
+  included: function(app) {
+    this._super.included(app);
+  }
 };

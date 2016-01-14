@@ -2,6 +2,16 @@
 
 Confirm user actions - just wrap your button/link/whatever with this addon. The target action will be called only when user confirms the dialog.
 
+This addon relies on **ember-modal-dialog** to show the dialog itself.
+
+## Install
+
+Do not forget to add these SASS imports into your **app.scss**:
+```
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+```
+
 ## Usage
  
 ### Simple confirm dialog (with default settings)

@@ -2,9 +2,9 @@
 
 Confirm user actions - just wrap your button/link/whatever with this addon. The target action will be called only when user confirms the dialog.
 
- ## Usage
+## Usage
  
- #### Simple confirm dialog (with default settings)
+#### Simple confirm dialog (with default settings)
 
   Action _confirmedAction_ will be called only when user confirms the confirmation dialog.
 
@@ -15,7 +15,7 @@ Confirm user actions - just wrap your button/link/whatever with this addon. The 
   ```
   
 
-  #### Confirm dialog with custom texts and all the callbacks
+#### Confirm dialog with custom texts and all the callbacks
 
   _Custom callbacks for confirm and cancel buttons_
 
@@ -29,8 +29,8 @@ Confirm user actions - just wrap your button/link/whatever with this addon. The 
   }}
       <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
   {{/confirm-dialog}}
-```
- #### Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons)
+  ```
+#### Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons)
 
   ```
   {{#confirm-dialog

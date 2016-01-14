@@ -3,7 +3,16 @@
 }
 
 .confirm-dialog {
+
   .button-bar {
     padding-top: 0.5em;
+
+    .confirm-button {
+      float: left;
+    }
+    .cancel-button {
+      float: right;
+    }
   }
+
 }

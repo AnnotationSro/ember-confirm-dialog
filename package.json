@@ -1,6 +1,6 @@
 {
   "name": "ember-confirm-dialog",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Ember confirm dialog",
   "directories": {
     "doc": "doc",

@@ -3,6 +3,7 @@
 Confirm user actions - just wrap your button/link/whatever with this addon. The target action will be called only when user confirms the dialog.
 
  ## Usage
+ 
  #### Simple confirm dialog (with default settings)
 
   Action _confirmedAction_ will be called only when user confirms the confirmation dialog.

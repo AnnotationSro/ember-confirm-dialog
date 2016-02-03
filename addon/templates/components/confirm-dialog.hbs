@@ -1,22 +1,22 @@
 <span class="confirm-wrapper">{{yield}}</span>
 
-<span class="modal-dialog-wrapper">
 {{#if isShowingModal}}
-  {{#modal-dialog
-  targetAttachment="center"
-  translucentOverlay=true
-  overlayClassNames="confirm-dialog"
-  }}
+    <span class="modal-dialog-wrapper">
+      {{#modal-dialog
+      targetAttachment="center"
+      translucentOverlay=true
+      overlayClassNames="confirm-dialog"
+      }}
 
-      <div class="dialog-text">
-        {{text}}
-      </div>
+          <div class="dialog-text">
+            {{text}}
+          </div>
 
       <div class="button-bar">
           <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">{{confirmButton}}</button>
           <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">{{cancelButton}}</button>
       </div>
 
-  {{/modal-dialog}}
-  </span>
+      {{/modal-dialog}}
+    </span>
 {{/if}}

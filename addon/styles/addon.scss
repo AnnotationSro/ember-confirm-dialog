@@ -1,5 +1,9 @@
 .confirm-dialog-button {
   display: inline;
+
+  .modal-dialog-wrapper div{
+    display: inline;
+  }
 }
 
 .confirm-dialog {

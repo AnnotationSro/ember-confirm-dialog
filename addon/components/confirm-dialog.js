@@ -49,7 +49,7 @@ export default Ember.Component.extend({
       this.get('confirmAction')();
 
       Ember.$(this.element).find('.confirm-wrapper').children().each((index, elem)=> {
-        Ember.$(elem).trigger('click', this.get('event'));
+        Ember.$(elem).find('[data-ember-action]').trigger('click', this.get('event'));
       });
 
       this.initComponent();

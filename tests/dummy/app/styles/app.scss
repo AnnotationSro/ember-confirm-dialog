@@ -1,2 +1,18 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+
+
+.custom-confirm-dialog {
+
+  .dialog-title{
+    background-color: aqua;
+  }
+
+  .dialog-text{
+    color: red;
+  }
+
+  .dialog-footer{
+    background-color: gray;
+  }
+}

@@ -7,15 +7,20 @@
       translucentOverlay=true
       overlayClassNames="confirm-dialog"
       }}
+          <div class={{dialogClass}}>
+              <div class="dialog-title">
+                {{title}}
+              </div>
 
-          <div class="dialog-text">
-            {{text}}
+              <div class="dialog-text">
+                {{text}}
+              </div>
+
+              <div class="dialog-footer">
+                  <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">{{confirmButton}}</button>
+                  <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">{{cancelButton}}</button>
+              </div>
           </div>
-
-      <div class="button-bar">
-          <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">{{confirmButton}}</button>
-          <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">{{cancelButton}}</button>
-      </div>
 
       {{/modal-dialog}}
     </span>

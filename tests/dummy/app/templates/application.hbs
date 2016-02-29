@@ -28,4 +28,23 @@
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
+
+    <h3>Confirm dialog with title and custom CSS classes</h3>
+
+  {{#confirm-dialog
+  dialogClass="custom-confirm-dialog"
+  title="This is a title"
+  text="And this is a content"
+  }}
+      <button {{action 'confirmedAction'}}>Click me!</button>
+  {{/confirm-dialog}}
+
+    <h3>BONUS: Confirm dialog for ordinary input</h3>
+
+  {{#confirm-dialog
+  title="Hello input"
+  text="Are you sure you want to use this input?"
+  }}
+      <input>
+  {{/confirm-dialog}}
 </div>

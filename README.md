@@ -40,12 +40,16 @@ Do not forget to add these SASS imports into your **app.scss**:
       <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
   {{/confirm-dialog}}
   ```
-### Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons)
+### Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons) + FontAwesome icons in buttons
+
+_Note: any font icon set is supported, not only FontAwesome_
 
   ```
   {{#confirm-dialog
   confirmButtonClass="btn btn-success"
   cancelButtonClass="btn btn-danger"
+  okCssIcon="fa fa-check-circle-o"
+  cancelCssIcon="fa fa-ban"
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}

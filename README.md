@@ -51,6 +51,32 @@ Do not forget to add these SASS imports into your **app.scss**:
   {{/confirm-dialog}}
   ```
 
+ ### Confirm dialog with title and custom CSS classes
+
+```
+  {{#confirm-dialog
+  dialogClass="custom-confirm-dialog"
+  title="This is a title"
+  text="And this is a content"
+  }}
+```
+In your SASS/CSS
+```css
+.custom-confirm-dialog {
+
+  .dialog-title{
+    background-color: aqua;
+  }
+
+  .dialog-text{
+    color: red;
+  }
+
+  .dialog-footer{
+    background-color: gray;
+  }
+}
+```
 # Addon Development
 
 ## Installation

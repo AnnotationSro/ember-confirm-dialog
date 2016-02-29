@@ -15,6 +15,8 @@ export default Ember.Component.extend({
   cancelButton: 'Cancel',
   confirmButtonClass: '',
   cancelButtonClass: '',
+  okCssIcon:null,
+  cancelCssIcon:null,
 
   //---private
   isShowingModal: false,

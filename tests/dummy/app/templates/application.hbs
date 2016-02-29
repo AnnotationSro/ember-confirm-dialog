@@ -20,11 +20,13 @@
       <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
   {{/confirm-dialog}}
 
-    <h3>Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons)</h3>
+    <h3>Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons) and button icons (FontAwesome or any other font icon)</h3>
 
   {{#confirm-dialog
   confirmButtonClass="btn btn-success"
   cancelButtonClass="btn btn-danger"
+  okCssIcon="fa fa-check-circle-o"
+  cancelCssIcon="fa fa-ban"
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}

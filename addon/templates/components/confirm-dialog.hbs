@@ -17,8 +17,18 @@
               </div>
 
               <div class="dialog-footer">
-                  <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">{{confirmButton}}</button>
-                  <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">{{cancelButton}}</button>
+                  <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">
+                    {{#if okCssIcon}}
+                        <i class={{okCssIcon}}></i>
+                    {{/if}}
+                    {{confirmButton}}
+                  </button>
+                  <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">
+                    {{#if cancelCssIcon}}
+                        <i class={{cancelCssIcon}}></i>
+                    {{/if}}
+                    {{cancelButton}}
+                  </button>
               </div>
           </div>
 

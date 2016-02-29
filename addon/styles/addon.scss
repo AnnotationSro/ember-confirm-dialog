@@ -20,3 +20,16 @@
   }
 
 }
+
+//override default ember-modal-dialog defaults because footer div looks ugly otherwise
+.ember-modal-dialog.ember-view{
+  padding: 0;
+
+  .dialog-header{
+    padding: 0.5em;
+  }
+
+  .dialog-text{
+    margin: 0.5em;
+  }
+}

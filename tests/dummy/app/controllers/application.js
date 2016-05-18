@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
+  disabled: false,
+
   actions: {
 
     confirmedAction(){
@@ -13,7 +16,7 @@ export default Ember.Controller.extend({
     },
 
     confirmDestroy(){
-      alert('Preparing, please wait...');
+      alert('World will be destroyd shortly, please wait...');
     },
 
     cancelDestroy(){

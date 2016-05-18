@@ -1,8 +1,10 @@
 <div class="container-fluid">
 
+  <label for="checkDisabled">Disabled: </label> {{input id="checkDisabled" type="checkbox" checked=disabled}}
+
     <h3>Confirm dialog with default settings</h3>
 
-  {{#confirm-dialog}}
+  {{#confirm-dialog disabled=disabled}}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
 
@@ -16,6 +18,7 @@
   cancelButton="Noooooo!!!!!"
   confirmAction=(action 'confirmDestroy')
   cancelAction=(action 'cancelDestroy')
+  disabled=disabled
   }}
       <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
   {{/confirm-dialog}}
@@ -27,6 +30,7 @@
   cancelButtonClass="btn btn-danger"
   okCssIcon="fa fa-check-circle-o"
   cancelCssIcon="fa fa-ban"
+  disabled=disabled
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
@@ -37,6 +41,7 @@
   dialogClass="custom-confirm-dialog"
   title="This is a title"
   text="And this is a content"
+  disabled=disabled
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
@@ -46,6 +51,7 @@
   {{#confirm-dialog
   title="Hello input"
   text="Are you sure you want to use this input?"
+  disabled=disabled
   }}
       <input>
   {{/confirm-dialog}}

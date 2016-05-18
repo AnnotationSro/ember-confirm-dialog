@@ -17,6 +17,7 @@ export default Ember.Component.extend({
   cancelButtonClass: '',
   okCssIcon:null,
   cancelCssIcon:null,
+  disabled: false,
 
   //---private
   isShowingModal: false,
@@ -28,10 +29,12 @@ export default Ember.Component.extend({
     Ember.$(this.element).find('.confirm-wrapper').on('click', (event) => {
       event.stopPropagation();
 
-      Ember.run(()=> {
-        this.set('event', event);
-        this.toggleProperty('isShowingModal', true);
-      });
+      if (!this.get('disabled')){
+        Ember.run(()=> {
+          this.set('event', event);
+          this.toggleProperty('isShowingModal', true);
+        });
+      }
     });
   },
 

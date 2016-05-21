@@ -1,10 +1,12 @@
+[![Build Status](https://travis-ci.org/AnnotationSro/ember-confirm-dialog.svg?branch=master)](https://travis-ci.org/AnnotationSro/ember-confirm-dialog)
+
+DEMO: http://annotationsro.github.io/ember-confirm-dialog/
+
 # Ember-confirm-dialog
 
 Confirm user actions - just wrap your button/link/whatever with this addon. The target action will be called only when user confirms the dialog.
 
 This addon relies on **ember-modal-dialog** to show the dialog itself.
-
-DEMO: http://annotationsro.github.io/ember-confirm-dialog/
 
 ## Install
 

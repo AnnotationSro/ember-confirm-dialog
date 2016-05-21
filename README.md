@@ -8,7 +8,7 @@ DEMO: http://annotationsro.github.io/ember-confirm-dialog/
 
 ## Install
 
-Do not forget to add these SASS imports into your **app.scss**:
+Do not forget to add these SASS imports into your **app.scss** - sorry about that - if you know how to make this easier, let me know :(
 ```
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";

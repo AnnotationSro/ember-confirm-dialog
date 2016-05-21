@@ -24,6 +24,7 @@ Do not forget to add these SASS imports into your **app.scss**:
   {{/confirm-dialog}}
   ```
   
+ You can also use a property `disabled` to control whether the confirm dialog should be enabled or not. 
 
 ### Confirm dialog with custom texts and all the callbacks
 
@@ -55,7 +56,7 @@ _Note: any font icon set is supported, not only FontAwesome_
   {{/confirm-dialog}}
   ```
 
- ### Confirm dialog with title and custom CSS classes
+### Confirm dialog with title and custom CSS classes
 
 ```
   {{#confirm-dialog

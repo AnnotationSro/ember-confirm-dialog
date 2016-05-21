@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   disabled: false,
+  callbackResult: null,
 
   actions: {
 
@@ -16,11 +17,11 @@ export default Ember.Controller.extend({
     },
 
     confirmDestroy(){
-      alert('World will be destroyd shortly, please wait...');
+      this.set('callbackResult', 'confirm');
     },
 
     cancelDestroy(){
-      alert('Uff, that was close, man!');
+      this.set('callbackResult', 'cancel');
     }
   }
 });

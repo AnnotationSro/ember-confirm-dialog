@@ -6,7 +6,7 @@ moduleForComponent('confirm-dialog', 'Integration | Component | confirm dialog',
 });
 
 test('it renders', function(assert) {
-  
+
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
@@ -17,9 +17,9 @@ test('it renders', function(assert) {
   // Template block usage:" + EOL +
   this.render(hbs`
     {{#confirm-dialog}}
-      template block text
+      <button {{action 'clickAction'}}>Click me</button>
     {{/confirm-dialog}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Click me');
 });

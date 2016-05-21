@@ -7,12 +7,15 @@
     <h3>Confirm dialog with default settings</h3>
 
   {{#confirm-dialog disabled=disabled}}
-      <button {{action 'confirmedAction'}}>Click me!</button>
+      <button id="defaultConfirm" {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
 
     <h3>Confirm dialog with custom texts and all the callbacks</h3>
 
     <p class="help-block">Custom callbacks for confirm and cancel buttons</p>
+    <p style="color: blue; font-weight: bold;">
+      Selected choice: <span id="callbackResult">{{callbackResult}}</span>
+    </p>
 
   {{#confirm-dialog
   text="Do you want to destry the world?"
@@ -22,7 +25,7 @@
   cancelAction=(action 'cancelDestroy')
   disabled=disabled
   }}
-      <button {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
+      <button id="callbackConfirm" {{action 'destroyWorld'}}>DESTROY THE WORLD !</button>
   {{/confirm-dialog}}
 
     <h3>Confirm dialog with Bootstrap (CSS classes for confirm/cancel buttons) and button icons (FontAwesome or any other font icon)</h3>

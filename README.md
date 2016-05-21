@@ -4,6 +4,8 @@ Confirm user actions - just wrap your button/link/whatever with this addon. The 
 
 This addon relies on **ember-modal-dialog** to show the dialog itself.
 
+DEMO: http://annotationsro.github.io/ember-confirm-dialog/
+
 ## Install
 
 Do not forget to add these SASS imports into your **app.scss**:

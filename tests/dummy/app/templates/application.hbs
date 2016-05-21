@@ -1,3 +1,5 @@
+<h2>Ember-confirm-dialog</h2>
+
 <div class="container-fluid">
 
   <label for="checkDisabled">Disabled: </label> {{input id="checkDisabled" type="checkbox" checked=disabled}}
@@ -44,15 +46,5 @@
   disabled=disabled
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
-  {{/confirm-dialog}}
-
-    <h3>BONUS: Confirm dialog for ordinary input</h3>
-
-  {{#confirm-dialog
-  title="Hello input"
-  text="Are you sure you want to use this input?"
-  disabled=disabled
-  }}
-      <input>
   {{/confirm-dialog}}
 </div>

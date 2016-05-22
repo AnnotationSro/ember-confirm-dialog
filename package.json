@@ -11,11 +11,15 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "Annotation s.r.o.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnnotationSro/ember-confirm-dialog"
+  },
+  "homepage": "https://github.com/AnnotationSro/ember-confirm-dialog",
+  "author": "Annotation",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",

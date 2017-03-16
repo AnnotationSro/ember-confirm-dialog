@@ -6,8 +6,8 @@ export default Ember.Component.extend({
   classNames:['confirm-dialog-button'],
 
   //---public
-  confirmAction: Ember.K,//optional action executed when user confirms the dialog
-  cancelAction: Ember.K,//optional action executed when user cancels confirmation dialog
+  confirmAction(){},//optional action executed when user confirms the dialog
+  cancelAction(){},//optional action executed when user cancels confirmation dialog
   title:'',
   text: 'Do you want to proceed?',
   dialogClass:'',

@@ -18,6 +18,7 @@ export default Ember.Component.extend({
   okCssIcon:null,
   cancelCssIcon:null,
   disabled: false,
+  active: true,
 
   //---private
   isShowingModal: false,
@@ -27,6 +28,11 @@ export default Ember.Component.extend({
 
   initComponent(){
     Ember.$(this.element).find('.confirm-wrapper').on('click', (event) => {
+
+      if (!this.get('active')){
+
+        return;
+      }
       event.stopPropagation();
 
       if (!this.get('disabled')){

@@ -25,6 +25,24 @@ test('clicking on default confirm dialog', function(assert) {
 
 });
 
+test('clicking on default non-active confirm dialog', function(assert) {
+  visit('/');
+
+  //initial assert
+  andThen(function() {
+    assert.equal(find('.dialog-text').length, 0);
+  });
+
+  //set as in-active
+  click('#activeConfirm');
+  //show the confirm dialog
+  click('#defaultConfirm');
+  andThen(function() {
+    assert.equal(find('.dialog-text').length, 0);
+  });
+
+});
+
 test('clicking on default confirm dialog - disabled', function(assert) {
   visit('/');
 
@@ -41,7 +59,7 @@ test('clicking on default confirm dialog - disabled', function(assert) {
   andThen(function() {
     assert.equal(find('.dialog-text').length, 0);
   });
-  
+
 });
 
 test('clicking on confirm dialog with callbacks - click on confirm button', function(assert) {

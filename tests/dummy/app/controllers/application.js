@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
 
   disabled: false,
   callbackResult: null,
+  isActive: true,
 
   actions: {
 

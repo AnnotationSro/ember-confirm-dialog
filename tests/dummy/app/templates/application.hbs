@@ -6,7 +6,11 @@
 
     <h3>Confirm dialog with default settings</h3>
 
-  {{#confirm-dialog disabled=disabled}}
+    <div>
+      is active?
+      {{input id="activeConfirm" type="checkbox" checked=isActive}}
+    </div>
+  {{#confirm-dialog disabled=disabled active=isActive}}
       <button id="defaultConfirm" {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
 
@@ -50,4 +54,5 @@
   }}
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
+
 </div>

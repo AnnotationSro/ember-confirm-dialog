@@ -1,9 +1,6 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'ember-confirm-dialog',
-  included: function(app) {
-    this._super.included(app);
-  }
+  name: 'ember-confirm-dialog'
 };

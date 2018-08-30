@@ -1,7 +1,9 @@
-import Ember from 'ember';
+import { run, scheduleOnce } from '@ember/runloop';
+import $ from 'jquery';
+import Component from '@ember/component';
 import layout from '../templates/components/confirm-dialog';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout: layout,
   classNames:['confirm-dialog-button'],
 
@@ -27,7 +29,7 @@ export default Ember.Component.extend({
 
 
   initComponent(){
-    Ember.$(this.element).find('.confirm-wrapper').on('click', (event) => {
+    $(this.element).find('.confirm-wrapper').on('click', (event) => {
 
       if (!this.get('active')){
 
@@ -36,7 +38,7 @@ export default Ember.Component.extend({
       event.stopPropagation();
 
       if (!this.get('disabled')){
-        Ember.run(()=> {
+        run(()=> {
           this.set('event', event);
           this.toggleProperty('isShowingModal', true);
         });
@@ -49,7 +51,7 @@ export default Ember.Component.extend({
   },
 
   willDestroyElement(){
-    Ember.$(this.element).find('.confirm-wrapper').off();
+    $(this.element).find('.confirm-wrapper').off();
   },
 
   actions: {
@@ -57,12 +59,12 @@ export default Ember.Component.extend({
       this.set('confirmed', false);
       this.set('isShowingModal', false);
 
-      Ember.$(this.element).find('.confirm-wrapper').off();
+      $(this.element).find('.confirm-wrapper').off();
 
       this.get('confirmAction')();
 
-      Ember.$(this.element).find('.confirm-wrapper').children().each((index, elem)=> {
-        Ember.$(elem).find('[data-ember-action]').addBack('[data-ember-action]').trigger('click', this.get('event'));
+      $(this.element).find('.confirm-wrapper').children().each((index, elem)=> {
+        $(elem).find('[data-ember-action]').addBack('[data-ember-action]').trigger('click', this.get('event'));
       });
 
       this.initComponent();
@@ -72,7 +74,7 @@ export default Ember.Component.extend({
     cancel(){
       this.toggleProperty('isShowingModal', false);
 
-      Ember.run.scheduleOnce('afterRender', this, () => {
+      scheduleOnce('afterRender', this, () => {
         this.get('cancelAction')();
       });
     }

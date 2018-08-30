@@ -1,25 +1,27 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { render } from '@ember/test-helpers';
 
-moduleForComponent('confirm-dialog', 'Integration | Component | confirm dialog', {
-  integration: true
-});
+module('Integration | Component | confirm dialog', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
-  this.render(hbs`{{confirm-dialog}}`);
+    await render(hbs`{{confirm-dialog}}`);
 
-  assert.equal(this.$().text().trim(), '');
+    assert.equal(this.element.textContent.trim(), '');
 
-  // Template block usage:" + EOL +
-  this.render(hbs`
-    {{#confirm-dialog}}
-      <button {{action 'clickAction'}}>Click me</button>
-    {{/confirm-dialog}}
-  `);
+    // Template block usage:" + EOL +
+    await render(hbs`
+      {{#confirm-dialog}}
+        <button {{action 'clickAction'}}>Click me</button>
+      {{/confirm-dialog}}
+    `);
 
-  assert.equal(this.$().text().trim(), 'Click me');
+    assert.equal(this.element.textContent.trim(), 'Click me');
+  });
 });

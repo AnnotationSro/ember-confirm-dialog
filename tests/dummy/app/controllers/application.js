@@ -9,12 +9,12 @@ export default Controller.extend({
   actions: {
 
     confirmedAction(){
-      alert('Hello world confirmed!');
+      // alert('Hello world confirmed!');
     },
 
 
     destroyWorld(){
-      alert('World has been destroyed, thanks for using our services.');
+      // alert('World has been destroyed, thanks for using our services.');
     },
 
     confirmDestroy(){

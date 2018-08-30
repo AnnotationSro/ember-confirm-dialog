@@ -17,7 +17,7 @@ Do not forget to add these SASS imports into your **app.scss** - sorry about tha
 ```
 
 ## Usage
- 
+
 ### Simple confirm dialog (with default settings)
 
   Action _confirmedAction_ will be called only when user confirms the confirmation dialog.
@@ -27,8 +27,8 @@ Do not forget to add these SASS imports into your **app.scss** - sorry about tha
       <button {{action 'confirmedAction'}}>Click me!</button>
   {{/confirm-dialog}}
   ```
-  
- You can also use a property `disabled` to control whether the confirm dialog should be enabled or not. 
+
+ You can also use a property `disabled` to control whether the confirm dialog should be enabled or not.
 
 ### Confirm dialog with custom texts and all the callbacks
 
@@ -92,12 +92,11 @@ In your SASS/CSS
 
 * `git clone` this repository
 * `npm install`
-* `bower install`
 
 ## Running
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+* `ember serve`
+* Visit the dummy application at http://localhost:4200.
 
 ## Running Tests
 

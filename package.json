@@ -26,7 +26,8 @@
   "homepage": "https://github.com/AnnotationSro/ember-confirm-dialog",
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.1"
+    "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-sass": "^7.1.7"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",

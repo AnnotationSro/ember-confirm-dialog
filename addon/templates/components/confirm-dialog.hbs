@@ -1,37 +1,37 @@
 <span class="confirm-wrapper">{{yield}}</span>
 
 {{#if isShowingModal}}
-    <span class="modal-dialog-wrapper">
-      {{#modal-dialog
+  <span class="modal-dialog-wrapper">
+    {{#modal-dialog
       targetAttachment="center"
       translucentOverlay=true
       overlayClassNames="confirm-dialog"
-      }}
-          <div class="{{dialogClass}} dialog-content">
-              <div class="dialog-title">
-                {{title}}
-              </div>
+    }}
+      <div class="{{dialogClass}} dialog-content">
+        <div class="dialog-title">
+          {{title}}
+        </div>
 
-              <div class="dialog-text">
-                {{text}}
-              </div>
+        <div class="dialog-text">
+          {{text}}
+        </div>
 
-              <div class="dialog-footer">
-                  <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">
-                    {{#if okCssIcon}}
-                        <i class={{okCssIcon}}></i>
-                    {{/if}}
-                    {{confirmButton}}
-                  </button>
-                  <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">
-                    {{#if cancelCssIcon}}
-                        <i class={{cancelCssIcon}}></i>
-                    {{/if}}
-                    {{cancelButton}}
-                  </button>
-              </div>
-          </div>
+        <div class="dialog-footer">
+          <button {{action "confirm"}} class="confirm-button {{confirmButtonClass}}">
+            {{#if okCssIcon}}
+              <i class={{okCssIcon}}></i>
+            {{/if}}
+            {{confirmButton}}
+          </button>
+          <button {{action "cancel"}} class="cancel-button {{cancelButtonClass}}">
+            {{#if cancelCssIcon}}
+              <i class={{cancelCssIcon}}></i>
+            {{/if}}
+            {{cancelButton}}
+          </button>
+        </div>
+      </div>
 
-      {{/modal-dialog}}
-    </span>
+    {{/modal-dialog}}
+  </span>
 {{/if}}

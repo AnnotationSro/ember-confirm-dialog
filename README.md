@@ -2,7 +2,21 @@
 
 DEMO: http://annotationsro.github.io/ember-confirm-dialog/
 
+<<<<<<< HEAD
 # Ember-confirm-dialog
+=======
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.4 or above
+* Ember CLI v2.13 or above
+* Node.js v8 or above
+
+
+Installation
+------------------------------------------------------------------------------
+>>>>>>> a9d95cc... message
 
 Confirm user actions - just wrap your button/link/whatever with this addon. The target action will be called only when user confirms the dialog.
 
@@ -30,6 +44,7 @@ Do not forget to add these SASS imports into your **app.scss** - sorry about tha
 
  You can also use a property `disabled` to control whether the confirm dialog should be enabled or not.
 
+<<<<<<< HEAD
 ### Confirm dialog with custom texts and all the callbacks
 
   _Custom callbacks for confirm and cancel buttons_
@@ -105,6 +120,10 @@ In your SASS/CSS
 * `ember test --server`
 
 ## Building
+=======
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+>>>>>>> a9d95cc... message
 
 * `ember build`
 
